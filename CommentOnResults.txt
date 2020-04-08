@@ -1,0 +1,8 @@
+6.	Write a brief paragraph describing the similarity or difference observed in the performance 
+of the InsertionSort algorithm for a vector vs. Linked List in a text file and push it to your Github repository.
+
+The InsertionSort using vectors is considerably slower than when using linked list. In the graphs, the time
+required for vectors is in seconds, while the time required for linked list is in milliseconds. However,
+both strategies show a quadratic behavior in terms of number of entries vs. execution time. This is expected,
+as the execution time of the insertion sort is known to increase in a quadratic proportion with respect to
+the number of entries.
