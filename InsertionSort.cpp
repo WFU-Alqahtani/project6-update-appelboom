@@ -44,7 +44,7 @@ int main() {
     vector<CSMatch> v;
     time_t start, end;
 
-    for (int size = 100; size <= 4900; size+= 100)
+    for (int size = 100; size <= 3000; size+= 100)
     {
         for (int index = 0; index < size; index++)
         {
@@ -65,7 +65,7 @@ int main() {
 
     //Note that in this case, the time is in milliseconds
 
-    for (int size = 100; size <= 4900; size+= 100){
+    for (int size = 100; size <= 3000; size+= 100){
             LinkedList the_list;
 
             for (int index = 0; index < size; index++)
