@@ -13,21 +13,47 @@ class LinkedList{
 
 public:
     //Constructors
-    LinkedList();
-    LinkedList(const LinkedList & list);
+    LinkedList()
+    {
+        this->head = nullptr;
+    }
+
+    LinkedList(const LinkedList & list)
+    {
+        this->head = nullptr;
+        Node* aNode = list.getHead();
+        while (aNode != nullptr)
+        {
+            this->append(aNode->value);
+            aNode = aNode->next;
+        }
+    }
 
     //Assignment Operator
     LinkedList &operator=(const LinkedList & rhs);
 
     //Destructor
-    ~LinkedList();
+    ~LinkedList()
+    {
+        Node* current = this->head;
+        while( current != nullptr ) {
+            Node* next = current->next;
+            delete current;
+            current = next;
+        }
+        this->head = nullptr;
+    }
 
     //Functions. You may not need to use them all
-    void append(YourClass obj);
-    bool Delete (YourClass obj);
-    YourClass find (YourClass obj)
+    void append(CSMatch obj);
+    bool Delete (CSMatch obj);
+    CSMatch find (CSMatch obj);
     void printList();
-    void InsertionSort();
+    void SortedInsert(Node** head_ref, Node* new_node);
+    void InsertionSort(Node* list_head);
+
+    Node *getHead() const;
+    void setHead(Node *value);
 
 private:
     Node* head;
