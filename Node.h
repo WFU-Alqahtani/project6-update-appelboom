@@ -1,10 +1,12 @@
 #ifndef NODE_H
 #define NODE_H
 
+#include "CSMatch.h"
+
 class Node {
 public:
     // Node constructor
-    Node(YourClass v , Node* n = nullptr)
+    Node(CSMatch v , Node* n = nullptr)
     {
         value = v;
         next = n;
@@ -17,7 +19,7 @@ public:
     friend class LinkedList;
 private:
 
-    YourClass value;
+    CSMatch value;
     Node* next;
 
 };
