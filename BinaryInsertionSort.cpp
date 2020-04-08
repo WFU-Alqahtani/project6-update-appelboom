@@ -1,7 +1,7 @@
 #include "BinaryInsertionSort.h"
 using namespace std;
 
-int binarySearch(vector<YourClass> a, YourClass item, int low, int high) {
+int binarySearch(vector<CSMatch> a, CSMatch item, int low, int high) {
     if (high <= low) {
         return (item > a[low] ? (low + 1) : low);
     }
@@ -19,11 +19,11 @@ int binarySearch(vector<YourClass> a, YourClass item, int low, int high) {
         return binarySearch(a, item, low, mid - 1); // look left
 }
 
-void insertionSort(vector<YourClass> &a, int n) {
+void insertionSort(vector<CSMatch> &a, int n) {
 
     for (int i = 1; i < n; i++) {
         int j = i - 1;
-        int selected = a[i];
+        CSMatch selected = a[i];
 
         // find location where selected should be inserted
         int loc = binarySearch(a, selected, 0, j);
